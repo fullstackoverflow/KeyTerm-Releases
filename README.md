@@ -10,6 +10,8 @@
   </p>
 </div>
 
+English | [中文](README.zh-CN.md)
+
 ---
 
 ## Features
@@ -44,6 +46,8 @@ Download the latest release for your platform from the public distribution repo,
 ```text
 https://github.com/fullstackoverflow/KeyTerm-Releases/releases
 ```
+
+Chinese version: [README.zh-CN.md](./README.zh-CN.md)
 
 | Platform | Installer |
 |----------|-----------|

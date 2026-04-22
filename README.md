@@ -58,6 +58,12 @@ Chinese version: [README.zh-CN.md](./README.zh-CN.md)
 
 Current macOS builds do not include a signing certificate. If you use the macOS package, please extract it and launch the app manually.
 
+If macOS blocks the app after extraction, run:
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/KeyTerm.app
+```
+
 ## Authentication Methods
 
 | Method | Description |
@@ -91,7 +97,7 @@ KeyTerm has first-class YubiKey PIV support:
 | Cryptography | p256, sha2, der |
 | Storage | Pluggable storage drivers (Local + S3 + WebDAV) |
 | Storage Abstraction | Apache OpenDAL |
-| Keychain | keyring-rs (native per platform) |
+| Vault Security | Argon2id + AES-256-GCM (in-memory unlock session) |
 | Build Tool | Vite 7 |
 
 ## Keyboard Shortcuts

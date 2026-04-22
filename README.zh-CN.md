@@ -54,6 +54,12 @@ https://github.com/fullstackoverflow/KeyTerm-Releases/releases
 
 当前 macOS 版本没有签名证书。如果你使用 macOS 包，请先自行解压应用后再手动启动。
 
+如果 macOS 在解压后仍然阻止启动，可以执行：
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/KeyTerm.app
+```
+
 ## 认证方式
 
 | 方式 | 说明 |
@@ -87,7 +93,7 @@ KeyTerm 提供完整的 YubiKey PIV 支持：
 | Cryptography | p256、sha2、der |
 | Storage | 可插拔存储驱动（Local + S3 + WebDAV） |
 | Storage Abstraction | Apache OpenDAL |
-| Keychain | keyring-rs（原生平台支持） |
+| Vault 安全 | Argon2id + AES-256-GCM（内存解锁会话） |
 | Build Tool | Vite 7 |
 
 ## 快捷键
